@@ -32,6 +32,18 @@
  * ie: "cake" => "acek"
  */
 
+ function alphaOrder(str){
+   if(typeof str === 'string'){
+      var name = str.split("");
+   name = name.sort();
+   name = name.join("");
+   	return name;
+      }else{
+        return null;
+      }
+ }
+
+
  /** Function: vowelCount
  * The function will take the str parameter being passed in and
  * return the number of vowels in the string
@@ -39,6 +51,27 @@
  * @return {number} count of vowels
  * ie: "oreo" => 3
  */
+
+
+function vowelCount(str){
+   if(typeof str === 'string'){
+     var empty = [];
+     var count = 0;
+     var name = str.split("");
+     //console.log(name);
+     for(var i =0; i<name.length ;i++){
+      if(name[i].match(/[aeiou]/g)){
+        count+= 1;
+          //console.log(count);
+         
+       }
+     }
+     return count;
+   }else{
+     return null;
+   }
+}
+ 
 
  /** Function: timeConvert
  * The function will take the str parameter representing the amount of minutes being passed in and
@@ -75,8 +108,8 @@
 
 module.exports = {
     firstReverse: firstReverse,
-    alphaOrder: null,
-    vowelCount: null,
+    alphaOrder: alphaOrder,
+    vowelCount: vowelCount,
     timeConvert: null,
     repeatString: null
 }
