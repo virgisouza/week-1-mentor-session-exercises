@@ -106,6 +106,21 @@ function vowelCount(str){
  */
 
 
+function repeatString(str, times){
+  if(typeof str === 'string' && typeof times === 'number'){
+    if(times>=1){
+      return str.repeat(times);
+    }else{
+      return " ";
+    }
+    
+  }else{
+    return null;
+  }
+}
+
+
+
 /**
  * Below here we see a module.exports which is set to an object with a bunch of keys.
  * The module.exports syntax is a built-in javascript keyword that
@@ -125,5 +140,5 @@ module.exports = {
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
     timeConvert: timeConvert,
-    repeatString: null
+    repeatString: repeatString
 }
